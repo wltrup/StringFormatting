@@ -8,10 +8,12 @@ public extension String {
         case right
     }
     
-    func formatted(width: Int,
-                   leftPadding: Character = " ",
-                   rightPadding: Character = " ",
-                   alignment: Alignment = .right) -> String {
+    func formatted(
+        width: Int,
+        leftPadding: Character = " ",
+        rightPadding: Character = " ",
+        alignment: Alignment = .right
+    ) -> String {
         guard width > self.count else { return self }
         let availSpace = width - self.count
         switch alignment {
